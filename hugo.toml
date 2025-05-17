@@ -1,0 +1,65 @@
+baseURL = 'https://johannesl.com/'
+languageCode = 'en'
+title = 'Sam SEO Sepiol — Software Engineer'
+description = 'Personal website and blog of Sam SEO Sepiol. Software engineer writing about web development, programming, and developer tools.'
+
+enableRobotsTXT = true
+canonifyURLs = false
+
+[sitemap]
+  changeFreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[pagination]
+  pagerSize = 10
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[params]
+  name = 'Sam SEO Sepiol'
+  firstName = 'Sam'
+  middleName = 'SEO'
+  lastName = 'Sepiol'
+  tagline = 'Software Engineer & Web Developer'
+  email = 'sam@example.com'
+  domain = 'johannesl.com'
+  locale = 'en_US'
+  ogImage = '/images/og-default.png'
+  twitterHandle = '@samsepiol'
+  githubUser = 'samsepiol'
+  linkedinUser = 'samsepiol'
+
+[menus]
+  [[menus.main]]
+    name = 'Blog'
+    url = '/blog/'
+    weight = 1
+  [[menus.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 2
+  [[menus.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 3
+  [[menus.main]]
+    name = 'Uses'
+    url = '/uses/'
+    weight = 4
+  [[menus.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 5
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+  page = ['HTML']
