@@ -1,0 +1,16 @@
+<header class="site-header" role="banner">
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="site-logo" aria-label="{{ .Site.Params.name }} homepage">
+      {{ .Site.Params.name }}
+    </a>
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

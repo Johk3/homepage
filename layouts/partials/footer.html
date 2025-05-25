@@ -1,0 +1,12 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-content">
+    <p>&copy; {{ now.Year }} {{ .Site.Params.name }}. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</footer>
