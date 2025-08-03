@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p>{{ . }}</p>{{ end }}
+</header>
+
+<ul class="post-list">
+  {{ range .Pages }}
+  <li class="post-item">
+    <span class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </span>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ with .Description }}<p class="post-summary">{{ . }}</p>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "schema.html" . }}
+{{ end }}
