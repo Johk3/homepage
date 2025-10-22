@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Description }}</p>
+</header>
+
+<div class="project-grid">
+  {{ range .Pages }}
+  <div class="project-card">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Description }}</p>
+    {{ with .Params.tags }}
+    <ul class="tag-list">
+      {{ range . }}
+      <li><a href="{{ "tags/" | absURL }}{{ . | urlize }}/">{{ . }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
+{{ partial "schema.html" . }}
+{{ end }}
