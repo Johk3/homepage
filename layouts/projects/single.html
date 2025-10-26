@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<article>
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    <div class="page-meta">
+      {{ with .Params.tech }}
+      <p>Built with: {{ delimit . ", " }}</p>
+      {{ end }}
+      {{ with .Params.github }}
+      <p><a href="{{ . }}">View on GitHub</a></p>
+      {{ end }}
+      {{ with .Params.demo }}
+      <p><a href="{{ . }}">Live Demo</a></p>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ .Content }}
+</article>
+
+{{ partial "schema.html" . }}
+{{ end }}
