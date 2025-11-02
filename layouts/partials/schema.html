@@ -22,9 +22,9 @@
       "url": "{{ .Site.BaseURL }}",
       "jobTitle": "{{ .Site.Params.tagline }}",
       "sameAs": [
-        "https://github.com/{{ .Site.Params.githubUser }}",
-        "https://linkedin.com/in/{{ .Site.Params.linkedinUser }}",
-        "https://twitter.com/{{ .Site.Params.twitterHandle }}"
+        {{ with .Site.Params.githubUser }}"https://github.com/{{ . }}"{{ end }}
+        {{ with .Site.Params.linkedinUser }},"https://linkedin.com/in/{{ . }}"{{ end }}
+        {{ with .Site.Params.twitterHandle }},"https://twitter.com/{{ . }}"{{ end }}
       ]
     }
   ]
