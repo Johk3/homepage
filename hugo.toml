@@ -33,9 +33,9 @@ canonifyURLs = false
   domain = 'johannesl.com'
   locale = 'en_US'
   ogImage = '/images/og-default.png'
-  twitterHandle = '@samsepiol'
-  githubUser = 'samsepiol'
-  linkedinUser = 'samsepiol'
+  twitterHandle = ''
+  githubUser = ''
+  linkedinUser = ''
 
 [menus]
   [[menus.main]]
