@@ -1,0 +1,15 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website built with Hugo",
+  "scripts": {
+    "lint:md": "markdownlint 'content/**/*.md'",
+    "lint:commit": "commitlint --from=HEAD~1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "markdownlint-cli": "^0.42.0"
+  }
+}
