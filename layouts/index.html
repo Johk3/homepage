@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ .Site.Params.name }}</h1>
+  <p>{{ .Site.Params.tagline }}. Writing about web development, programming, and developer tools.</p>
+</section>
+
+<section aria-labelledby="latest-posts">
+  <h2 id="latest-posts" class="section-title">Latest Posts</h2>
+  <ul class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+    <li class="post-item">
+      <span class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </span>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p class="post-summary">{{ .Description }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  <p><a href="/blog/">View all posts &rarr;</a></p>
+</section>
+
+<section aria-labelledby="featured-projects">
+  <h2 id="featured-projects" class="section-title">Projects</h2>
+  <div class="project-grid">
+    {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+    <div class="project-card">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Description }}</p>
+    </div>
+    {{ end }}
+  </div>
+  <p><a href="/projects/">View all projects &rarr;</a></p>
+</section>
+
+{{ partial "schema.html" . }}
+{{ end }}
