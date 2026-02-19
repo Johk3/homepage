@@ -24,6 +24,7 @@ canonifyURLs = false
       unsafe = false
 
 [params]
+  description = 'Personal website and blog of Sam SEO Sepiol. Software engineer writing about web development, programming, and developer tools.'
   name = 'Sam SEO Sepiol'
   firstName = 'Sam'
   middleName = 'SEO'
