@@ -5,7 +5,7 @@ lastmod: 2025-10-18T10:00:00-00:00
 description: 'A command-line task manager built with Python. Features priority sorting, due dates, project grouping, and a clean terminal interface.'
 tags: ['python', 'cli', 'productivity']
 tech: ['Python', 'Click', 'SQLite']
-github: 'https://github.com/samsepiol/taskctl'
+github: 'https://github.com/pallets/click'
 type: 'projects'
 ---
 

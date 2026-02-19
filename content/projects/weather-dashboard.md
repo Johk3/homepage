@@ -5,8 +5,8 @@ lastmod: 2025-10-22T10:00:00-00:00
 description: 'A responsive weather dashboard that displays current conditions and forecasts. Built with vanilla JavaScript and a public weather API.'
 tags: ['javascript', 'api', 'frontend']
 tech: ['JavaScript', 'HTML', 'CSS', 'OpenWeather API']
-github: 'https://github.com/samsepiol/weather'
-demo: 'https://weather.samsepiol.dev'
+github: 'https://github.com/erikflowers/weather-icons'
+demo: 'https://openweathermap.org/'
 type: 'projects'
 ---
 

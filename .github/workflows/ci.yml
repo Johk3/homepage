@@ -46,7 +46,4 @@ jobs:
           enforce_https: false
           check_external_hash: false
           ignore_urls: |
-            https://github.com/samsepiol
-            https://linkedin.com/in/samsepiol
-            https://twitter.com/samsepiol
-            https://weather.samsepiol.dev
+            https://uses.tech

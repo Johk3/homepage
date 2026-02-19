@@ -5,7 +5,7 @@ lastmod: 2025-10-15T10:00:00-00:00
 description: 'A fast, SEO-optimized personal website built with Hugo. Features structured data, perfect Lighthouse scores, and automated deployment to GitHub Pages.'
 tags: ['hugo', 'seo', 'static site']
 tech: ['Hugo', 'HTML', 'CSS', 'GitHub Actions']
-github: 'https://github.com/samsepiol/portfolio'
+github: 'https://github.com/gohugoio/hugo'
 type: 'projects'
 ---
 
