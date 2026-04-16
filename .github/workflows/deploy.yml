@@ -43,3 +43,30 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Submit to IndexNow
+        run: |
+          URLS=$(grep -oP '<loc>\K[^<]+' public/sitemap.xml | head -100)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"johannesl.com\",
+              \"key\": \"6316bf062a9d47a5ac299beb65056af5\",
+              \"keyLocation\": \"https://johannesl.com/6316bf062a9d47a5ac299beb65056af5.txt\",
+              \"urlList\": [$(echo "$URLS" | sed 's/.*/"&"/' | paste -sd,)]
+            }"
