@@ -348,3 +348,31 @@ article pre code {
 .uses-section h2 {
   margin-top: var(--space-lg);
 }
+
+/* Share links */
+.share-links {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.share-links h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.share-links ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding: 0;
+}
+
+.share-links a {
+  font-size: 0.875rem;
+  background: #f0f0f0;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 3px;
+}

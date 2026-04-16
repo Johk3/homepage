@@ -1,11 +1,20 @@
 {{ define "main" }}
 <section class="hero">
-  <h1>{{ .Site.Params.name }}</h1>
-  <p>{{ .Site.Params.tagline }}. Writing about web development, programming, and developer tools.</p>
+  <h1>{{ .Site.Params.name }} — {{ .Site.Params.tagline }}</h1>
+  <p>Writing about web development, programming, and developer tools. Focused on building fast, accessible, and SEO-optimized websites.</p>
+</section>
+
+<section aria-labelledby="about-intro">
+  <h2 id="about-intro" class="section-title">About Me</h2>
+  <p>I am a software engineer who builds fast, accessible websites and developer tools. I write about web development best practices, programming languages, performance optimization, and the tools that make developers more productive.</p>
+  <p>My work focuses on static site generation, search engine optimization, and core web vitals. I believe the best websites are the simplest ones — fast loading, easy to navigate, and built with clean, semantic HTML.</p>
+  <p>Whether you are learning to code for the first time or looking to improve your web development workflow, you will find practical guides and tutorials on this site covering everything from CSS layout techniques to Git branching strategies.</p>
+  <p><a href="/about/">Learn more about me &rarr;</a></p>
 </section>
 
 <section aria-labelledby="latest-posts">
-  <h2 id="latest-posts" class="section-title">Latest Posts</h2>
+  <h2 id="latest-posts" class="section-title">Latest Blog Posts</h2>
+  <p>I write in-depth articles about web development, programming languages, developer tools, and software engineering best practices. Here are some recent posts:</p>
   <ul class="post-list">
     {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
     <li class="post-item">
@@ -20,8 +29,22 @@
   <p><a href="/blog/">View all posts &rarr;</a></p>
 </section>
 
+<section aria-labelledby="topics">
+  <h2 id="topics" class="section-title">Topics I Cover</h2>
+  <p>The blog covers a range of web development and software engineering topics, organized into key areas:</p>
+  <ul>
+    <li><strong>Static Site Generators</strong> — building fast websites with tools like Hugo, including project setup, templating, and deployment to platforms like GitHub Pages.</li>
+    <li><strong>Web Performance</strong> — understanding and optimizing Core Web Vitals, image optimization, CSS efficiency, and achieving perfect Lighthouse scores.</li>
+    <li><strong>SEO and Structured Data</strong> — implementing JSON-LD schema markup, Open Graph tags, sitemaps, and other technical SEO strategies that improve search visibility.</li>
+    <li><strong>Programming Languages</strong> — practical comparisons and tutorials for Python, JavaScript, and TypeScript, helping you choose the right tool for each project.</li>
+    <li><strong>Developer Tools and Workflow</strong> — setting up development environments, mastering Git branching, using the terminal effectively, and building productive workflows.</li>
+    <li><strong>Frontend Development</strong> — CSS Grid, Flexbox, responsive design, and building accessible user interfaces without heavy frameworks.</li>
+  </ul>
+</section>
+
 <section aria-labelledby="featured-projects">
-  <h2 id="featured-projects" class="section-title">Projects</h2>
+  <h2 id="featured-projects" class="section-title">Featured Projects</h2>
+  <p>I build open source tools and web applications. Here are some recent projects:</p>
   <div class="project-grid">
     {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
     <div class="project-card">

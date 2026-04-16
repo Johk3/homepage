@@ -30,6 +30,16 @@
 
   {{ .Content }}
 
+  <aside class="share-links" aria-label="Share this post">
+    <h2>Share This Post</h2>
+    <ul>
+      <li><a href="https://twitter.com/intent/tweet?url={{ .Permalink | safeURL }}&text={{ .Title | safeURL }}" rel="noopener noreferrer" target="_blank">Share on X</a></li>
+      <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | safeURL }}" rel="noopener noreferrer" target="_blank">Share on LinkedIn</a></li>
+      <li><a href="https://www.reddit.com/submit?url={{ .Permalink | safeURL }}&title={{ .Title | safeURL }}" rel="noopener noreferrer" target="_blank">Share on Reddit</a></li>
+      <li><a href="https://news.ycombinator.com/submitlink?u={{ .Permalink | safeURL }}&t={{ .Title | safeURL }}" rel="noopener noreferrer" target="_blank">Share on Hacker News</a></li>
+    </ul>
+  </aside>
+
   <nav aria-label="Related posts">
     <h2>Related Posts</h2>
     <ul>

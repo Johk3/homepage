@@ -11,5 +11,8 @@
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ partial "seo-meta.html" . }}
 <meta name="theme-color" content="#0057b7">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
